@@ -1,0 +1,13 @@
+.header{
+    background-Color:#f30000 ;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    text-Align: left;
+}
+
+.title{
+    margin: 0;
+    font-weight: bold;
+    font-Size: 64px;
+    font-family: inherit;
+  }
