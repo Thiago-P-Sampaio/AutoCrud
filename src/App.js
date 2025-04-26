@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import Header from './components/Header';
+import VeiculoForm from './components/Form/VeiculoForm.jsx';
+import VeiculoCard from './components/Cards/VeiculoCard.jsx';
 
-function App() {
+const App = () => {
+  const [vehicles, setVehicles] = useState([]);
+
+  const handleAddVehicle = (newVehicle) => {
+    setVehicles([...vehicles, newVehicle]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* Cabeçalho */}
+      <Header />
+
+      {/* Conteúdo principal */}
+      <Container className="my-4">
+        {/* Formulário de Cadastro */}
+        <VeiculoForm onAddVehicle={handleAddVehicle} />
+
+        {/* Lista de Veículos */}
+        <h5 className="mt-5 mb-3 fw-bold">Veículos cadastrados</h5>
+        <Row className="g-4">
+          {vehicles.map((vehicle, index) => (
+            <Col key={index} xs={12} sm={6} md={4}>
+              <VeiculoCard 
+                name={vehicle.name}
+                brand={vehicle.brand}
+                image={vehicle.image}
+              />
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </>
   );
-}
+};
 
 export default App;

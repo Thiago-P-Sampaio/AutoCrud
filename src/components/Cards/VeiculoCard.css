@@ -1,0 +1,22 @@
+.vehicle-card {
+    background-color: #d3d3d3;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .image-placeholder {
+    background-color: #fff0f0;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #555;
+    border-radius: 5px;
+  }
+  
+  .w-45 {
+    width: 45%;
+  }
+  
