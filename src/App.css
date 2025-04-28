@@ -12,7 +12,57 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+/*  */
+/*  */
+/*  */
 
+@media (min-width: 1025px) {
+  body {
+    font-size: 16px;
+    background-color: #f0f0f0;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 14px;
+    background-color: #e0e0e0;
+  }
+  header {
+      text-align: center;
+  }
+  .button-div {
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+
+@media (max-width: 767px) {
+  body {
+    font-size: 12px;
+    background-color: #d0d0d0;
+  }
+  header {
+    text-align: center;
+}
+.button-div {
+  justify-content: center;
+  align-items: center;
+}
+.card-container {
+  width: 100%;
+}
+
+}
+
+
+
+/*  */
+/*  */
+/*  */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
