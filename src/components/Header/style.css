@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
+header {
+    background-color: red;
+    padding: 20px;
+    font-family: 'Cal Sans';
+}
