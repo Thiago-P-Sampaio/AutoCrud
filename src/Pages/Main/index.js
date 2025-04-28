@@ -1,7 +1,7 @@
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Modal, Button, Card } from "react-bootstrap";
+import { Modal, Button } from "react-bootstrap";
 import "./style.css";
 
 export default function Form() {
