@@ -25,7 +25,7 @@ Para começar, clone o repositório para a sua máquina local:
 git clone https://github.com/Thiago-P-Sampaio/AutoCrud.git
 ```
 ```bash
-git cd AutoCrud
+cd AutoCrud
 ```
 ```bash
 npm i
