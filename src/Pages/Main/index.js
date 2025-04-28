@@ -99,7 +99,9 @@ export default function Form() {
 
   return (
     <div className="container-principal">
-      <button onClick={() => setExibirModal(true)}>Olá</button>
+      <div className="button-div">
+      <Button variant= "outline-success" onClick={() => setExibirModal(true)}>Adicionar</Button>
+      </div>
       <Modal show={exibirModal} onHide={() => setExibirModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Cadastrar veículo</Modal.Title>
@@ -153,26 +155,37 @@ export default function Form() {
 
 
       {/* Alterações aqui em baixo ↓ */}
-      <Card>
-        {itens.map((item) => (
-          <div key={item.id}>
-            <h2>
-              {item.marca} - {item.modelo}
-            </h2>
-            <img src={item.imagem} alt={item.modelo} />
-            <Button
-              variant="danger"
-              onClick={() => excluirItem(item.id)}
-              className="mt-2"
-            >
-              Excluir
-            </Button>
-            <Button variant="warning" onClick={() => editarItem(item.id)}>
-              Editar
-            </Button>
-          </div>
-        ))}
-      </Card>
+      <div className="card-container">
+  {itens.map((item) => (
+    <div key={item.id} className="card-item">
+      <img src={item.imagem} alt={item.modelo} className="card-image" />
+      <h2 className="card-title">
+        {item.marca} 
+      </h2>
+      <p>
+      {item.modelo}
+      </p>
+      <div className="card-buttons">
+        <Button
+          variant="danger"
+          onClick={() => excluirItem(item.id)}
+          className="btn-action"
+        >
+          Excluir
+        </Button>
+        <Button
+          variant="warning"
+          onClick={() => editarItem(item.id)}
+          className="btn-action"
+        >
+          Editar
+        </Button>
+      </div>
+    </div>
+  ))}
+</div>
+
+
     </div>
   );
 }
